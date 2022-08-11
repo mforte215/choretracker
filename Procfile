@@ -1,0 +1,1 @@
+web: gunicorn ChoreTracker.wsgi

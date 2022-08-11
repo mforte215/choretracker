@@ -1,0 +1,16 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Chore Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="page-content">
+    {% include "app/toolbar.html" %}
+    {% block content%}{% endblock %}
+    {% include "app/footer.html" %}
+    </div>
+</body>
+</html>

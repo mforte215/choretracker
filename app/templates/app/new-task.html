@@ -1,0 +1,21 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+<div class="index-main-content">
+    <div class="form-container">
+    <h3>New Task</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-field-two">
+    <label>Activity:</label><input type="text" name="activity" />
+        </div>
+        <div class="form-field-two">
+    <label>Room:</label><input type="text" name="room" />
+        </div>
+    
+    <input class="login-btn" type="submit" value="Add Task" />
+    </form>
+</div>
+
+</div>
+{% endblock %}

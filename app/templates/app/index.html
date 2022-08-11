@@ -1,0 +1,54 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+<div class="index-main-content">
+    {% if user.is_authenticated %}
+        <h3>Welcome {{user}} </h3>
+        <div class="link-container">
+        <a href="{% url 'new-task' %}">Add New Task</a>
+        </div>
+    {% endif %}
+    <table class="task-table">
+    <tr>
+        <th>
+            <a class="sort-link" href="{% url 'sort-table' 'activity' direction %}">Activity</a>
+        </th>
+        <th><a class="sort-link" href="{% url 'sort-table' 'room' direction %}">Room</a></th>
+        <th><a class="sort-link" href="{% url 'sort-table' 'last_cleaned_date' direction %}">Last Cleaned</a></th>
+        <th><a class="sort-link" href="{% url 'sort-table' 'completed_by' direction %}">Done By</a></th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+    <td>{{task.activity}}</td>
+    <td>{{task.room}}</td>
+    <td>{{task.last_cleaned_date}}</td>
+    <td>
+        {% if user.is_authenticated %}
+        {{task.completed_by}}
+        {% else %}
+        <div class="icon-holder">
+        <i class="gg-lock"></i>
+        </div>
+        {% endif %}
+    </td>
+    <td>
+        {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            
+            <input class="complete-btn" name="{{task.id}}" type="submit" value="Complete" />
+        </form>  
+        {% endif %}  
+    </td>
+    <td>
+        {% if user.is_authenticated %}
+            <a class="delete-btn" href="{% url 'delete-task' task.id %}">Delete</a>
+        {% endif %}  
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}

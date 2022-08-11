@@ -1,0 +1,200 @@
+@import 'https://css.gg/lock.css';
+
+body {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  /* %%%%%%%%%%%%%% */
+  /* NAVIGATION BAR */
+  /* %%%%%%%%%%%%%% */
+  
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+      width: 100%;
+      -webkit-box-shadow: 1px 5px 15px -2px rgba(0,0,0,0.5); 
+      box-shadow: 1px 5px 15px -2px rgba(0,0,0,0.5);
+      
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: larger;
+    }
+  
+    
+    
+    .topnav .icon {
+      display: none;
+    }
+
+
+    .footer {
+        height: 3em;
+        background-color: rgb(0, 76, 84);
+        text-align: center;
+        color: white;
+        position: relative;
+        bottom: 0;
+      }
+      
+      .footer p {
+        padding-top: 1em;
+      }
+      
+      .index-main-content {
+        width: 90%;
+        margin: 8ch auto 5em auto;
+        min-height: 100vh;
+      }
+
+      .task-table{
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse; 
+      }
+
+      tr {
+        border: 2px solid black;
+        padding: 5px;
+      }
+      
+      td {
+        padding: 15px;
+      }
+
+      .complete-btn {
+        text-decoration: none;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 6px;
+      }
+
+      .delete-btn {
+        text-decoration: none;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 4px;
+        color: black;
+        padding: 6px;
+      }
+
+      .delete-btn:hover {
+        color: white;
+        background-color: red;
+      }
+
+
+      .complete-btn:hover {
+        color: white;
+        background-color: green;
+      }
+
+      .link-container {
+        margin-bottom: 30px;
+
+      }
+
+      .link-container a:hover {
+        color: white;
+        background-color: darkgray;
+      }
+
+      .link-container a {
+        border: 2px solid black;
+        border-radius: 3px;
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+      }
+
+      .form-container {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid black;
+        border-radius: 8px;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .form-field {
+        margin: 10px;
+
+      }
+      .form-field-two {
+        margin: 10px;
+
+      }
+
+      .form-field-two input {
+        border: 2px solid black;
+        width: 100%;
+      }
+
+      .form-field-two label {
+        margin-right: 5px;
+      }
+
+      .form-field input {
+        border: 2px solid black;
+      }
+
+      .form-field label {
+        margin-right: 5px;
+      }
+
+      .login-btn {
+        border: 2px solid black;
+        border-radius: 3px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+      }
+
+      .gg-lock {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 12px;
+        height: 11px;
+        border: 2px solid;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom: transparent;
+        margin-top: -12px
+    }
+    .gg-lock::after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 16px;
+        height: 10px;
+        border-radius: 2px;
+        border: 2px solid transparent;
+        box-shadow: 0 0 0 2px;
+        left: -4px;
+        top: 9px
+    }
+
+    .icon-holder {
+      text-align: center;
+    }
+
+    .sort-link {
+      text-decoration: none;
+      color: black;
+    }
